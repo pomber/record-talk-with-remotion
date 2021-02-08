@@ -1,0 +1,39 @@
+.talk-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.talk-scale {
+  transform: scale(calc(1920 / 1024));
+  width: 1024px;
+  height: 576px;
+}
+
+.grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 580px 1fr;
+  grid-template-rows: 253.36px 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.slot-1 {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.slot-2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.slot-3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.talk-container .ch-frame {
+  box-shadow: none;
+  border: 0.7px solid rgb(56, 56, 56);
+}

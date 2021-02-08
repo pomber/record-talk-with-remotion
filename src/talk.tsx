@@ -1,23 +1,54 @@
-import {useCurrentFrame} from 'remotion';
+import { useCurrentFrame } from "remotion";
+import "./talk.css";
+import { Gradient } from "./gradient";
 
 export function Talk() {
-	return (
-		<div
-			style={{
-				display: 'flex',
-				justifyContent: 'center',
-				alignItems: 'center',
-				background: '#111',
-				color: '#fafafa',
-				fontSize: '5em',
-				height: '100%',
-				width: '100%',
-			}}
-		>
-			<div>
-				<h1>Hello World</h1>
-				<pre>Frame: {useCurrentFrame()}</pre>
-			</div>
-		</div>
-	);
+  return (
+    <Center>
+      <main className="grid">
+        <div className="slot-1">
+          <div
+            style={{
+              height: "100%",
+              background: "#222",
+              borderRadius: "8px",
+              color: "white",
+              fontSize: "3em",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {useCurrentFrame()}
+          </div>
+        </div>
+        <div className="slot-2">
+          <div
+            style={{
+              height: "100%",
+              background: "#222",
+              borderRadius: "8px",
+            }}
+          ></div>
+        </div>
+        <Gradient className="slot-3">
+          <div
+            style={{
+              height: "100%",
+              background: "#222",
+              borderRadius: "8px",
+            }}
+          ></div>
+        </Gradient>
+      </main>
+    </Center>
+  );
+}
+
+function Center({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="talk-container">
+      <div className="talk-scale">{children}</div>
+    </div>
+  );
 }
