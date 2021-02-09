@@ -7,7 +7,8 @@
     "build": "remotion render src/index.tsx Talk out.mp4",
     "upgrade": "remotion upgrade",
     "server": "ts-node server.tsx",
-    "test": "eslint 'src' --ext ts,tsx && tsc"
+    "test": "eslint 'src' --ext ts,tsx && tsc",
+    "mix-audio": "ffmpeg -i out.mp4 -i src/speaker.webm -c:v copy -map 0 -map 1:a -shortest talk.mp4"
   },
   "repository": {},
   "license": "UNLICENSED",

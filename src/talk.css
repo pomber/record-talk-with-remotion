@@ -37,3 +37,78 @@
   box-shadow: none;
   border: 0.7px solid rgb(56, 56, 56);
 }
+
+/* speaker panel */
+.speaker-panel {
+  border-radius: 6px;
+  overflow: hidden;
+  background: #222;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.video-container {
+  height: 182px;
+  position: relative;
+}
+
+.video-wrapper {
+  top: -6px;
+  height: 229px;
+  position: relative;
+}
+
+video {
+  height: 100%;
+  width: 388px;
+}
+
+.captions-container {
+  /* flex: 1; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 0.8em;
+  color: #bbb;
+  /* background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    #222 66%
+  ); */
+  color: #ddd;
+  font-family: Ubuntu, Droid Sans, -apple-system, BlinkMacSystemFont, Segoe WPC,
+    Segoe UI, sans-serif;
+}
+
+.captions {
+  color: #ddd;
+  height: 78px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Ubuntu, Droid Sans, -apple-system, BlinkMacSystemFont, Segoe WPC,
+    Segoe UI, sans-serif;
+  padding: 0 16px;
+  margin: 0;
+  z-index: 10;
+  flex: 1;
+  white-space: pre;
+  font-size: 1.34em;
+  line-height: 1.3em;
+  background: #222;
+
+  backface-visibility: hidden; /* https://stackoverflow.com/a/50248254/1325646 */
+}

@@ -1,8 +1,9 @@
-import { useCurrentFrame } from "remotion";
+import { useCurrentFrame, Video } from "remotion";
 import "./talk.css";
 import { Gradient } from "./gradient";
 import { MiniBrowser } from "@code-hike/mini-browser";
 import { IFrame } from "./iframe";
+import speaker from "./speaker.webm";
 
 export function Talk() {
   return (
@@ -21,10 +22,27 @@ export function Talk() {
           </MiniBrowser>
         </div>
         <Gradient className="slot-3">
-          <Placeholder />
+          <SpeakerPanel />
         </Gradient>
       </main>
     </Center>
+  );
+}
+
+function SpeakerPanel() {
+  return (
+    <div className="speaker-panel">
+      <div className="video-container">
+        <div className="h-full">
+          <div className="video-wrapper">
+            <Video src={speaker} />
+          </div>
+        </div>
+      </div>
+      <div className="captions-container">
+        <div className="captions">Captions Placeholder</div>
+      </div>
+    </div>
   );
 }
 

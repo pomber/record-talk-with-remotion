@@ -1022,10 +1022,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@remotion/bundler@^1.0.0", "@remotion/bundler@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@remotion/bundler/-/bundler-1.0.4.tgz#a9cadf1cb89f8a9ba96f0a2c4fc3a9f0372e068b"
-  integrity sha512-sGDZomHDcA+XoNVuIza9uCRnDzhGH1vKucAqxxHvW4liHrbnw7smfvaPCythQVvjUZfxLcgoQyZm1ZmjS90dHA==
+"@remotion/bundler@^1.0.0", "@remotion/bundler@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@remotion/bundler/-/bundler-1.0.5.tgz#f66c14f202967f07c04a0238be2014e5c53aec5e"
+  integrity sha512-7fL0KajxHKR8WYKQGggcPGqgv/Zc7f2asR+SGURofJP3qu5g6ZhWMkx5XLmi75ghHU8MvJY6NMdT9v0xaiv5gA==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/preset-env" "^7.12.10"
@@ -1042,7 +1042,7 @@
     react "^17.0.1"
     react-dom "^17.0.1"
     react-refresh "^0.8.2"
-    remotion "^1.0.1"
+    remotion "^1.0.5"
     semver "7.3.4"
     style-loader "^2.0.0"
     styled-components "^5.2.1"
@@ -1052,16 +1052,16 @@
     webpack-hot-middleware "^2.25.0"
 
 "@remotion/cli@^1.0.0":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@remotion/cli/-/cli-1.0.4.tgz#2d8e4833fe52ce475b7641dd963a25c958474141"
-  integrity sha512-Pe45NN0Do/88jZe6G1i3mYh3qFljPhRaNcA7zMGXZrNhciO7qH4LpklPXCgPsHpVS7QOmc1j3S3jMi0urezaKQ==
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@remotion/cli/-/cli-1.0.5.tgz#33735acf6c53fd0ad100d75f5c67905755546ce8"
+  integrity sha512-0PKpkfroRvyl3Zhf0LLsZ8DFhTJS57/LYzsXZBoY73rcKr+Lk8j6BLgiMpgNZjkhFDAIXkKJdp1EMUSiAFEwGA==
   dependencies:
     "@babel/core" "^7.10.4"
     "@babel/preset-env" "^7.10.4"
     "@babel/preset-react" "^7.10.4"
     "@babel/preset-typescript" "^7.10.4"
-    "@remotion/bundler" "^1.0.4"
-    "@remotion/renderer" "^1.0.4"
+    "@remotion/bundler" "^1.0.5"
+    "@remotion/renderer" "^1.0.5"
     "@types/cli-progress" "^3.7.0"
     "@types/node" "^14.0.13"
     "@types/react" "^17.0.0"
@@ -1076,7 +1076,7 @@
     prettier "^2.0.5"
     react "^17.0.1"
     react-dom "^17.0.1"
-    remotion "^1.0.1"
+    remotion "^1.0.5"
     styled-components "^5.1.1"
     typescript "^4.1.2"
     webpack "5.20.1"
@@ -1102,20 +1102,20 @@
   resolved "https://registry.yarnpkg.com/@remotion/eslint-plugin/-/eslint-plugin-1.0.0.tgz#4bbb6d3bc36deb33d74ca45d6425e8fb6d9cdae7"
   integrity sha512-uIvgBjvWO//vexlADMMutLf9hWNVHc7O4IyAB+L/9dk5Td5xqvXSfhDrw0bMAMfAB4PHIj76z4iUPjKndMWK2g==
 
-"@remotion/renderer@^1.0.0", "@remotion/renderer@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@remotion/renderer/-/renderer-1.0.4.tgz#b2b215eb229868cd873fac416ebfa3af592205d8"
-  integrity sha512-L/V8s082diRbQDjJaLly/6ZKJBTPeq5iqkFIxKzZMHxlAc7EcEg4PUuOMgQP4K2tIKrhlx9xNt1ovH5otKVQ5Q==
+"@remotion/renderer@^1.0.0", "@remotion/renderer@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@remotion/renderer/-/renderer-1.0.5.tgz#61dc936e31034333d01a5cc4a7053799b3d53dff"
+  integrity sha512-TSKYKL11QJenJQrO4NGTLeRJPR0VEyAyeIkAn6qaa3QBh7PvhMIlj0GDZ/cmMKkIEnP/KYOHCiwjw3MgN+l+MA==
   dependencies:
     "@babel/preset-typescript" "^7.10.4"
-    "@remotion/bundler" "^1.0.4"
+    "@remotion/bundler" "^1.0.5"
     "@types/babel__core" "^7.1.12"
     "@types/babel__template" "^7.4.0"
     "@types/puppeteer" "^3.0.0"
     execa "^4.0.2"
     prettier "^2.0.5"
     puppeteer "^4.0.0"
-    remotion "^1.0.1"
+    remotion "^1.0.5"
     typescript "^4.1.2"
     webpack "5.20.1"
     xns "^2.0.7"
@@ -1815,9 +1815,9 @@ binary-extensions@^2.0.0:
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
 bl@^4.0.3:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/bl/-/bl-4.0.4.tgz#f4fda39f81a811d0df6368c1ed91dae499d1c900"
-  integrity sha512-7tdr4EpSd7jJ6tuQ21vu2ke8w7pNEstzj1O8wwq6sNNzO3UDi5MA8Gny/gquCj7r2C6fHudg8tKRGyjRgmvNxQ==
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/bl/-/bl-4.1.0.tgz#451535264182bec2fbbc83a62ab98cf11d9f7b3a"
+  integrity sha512-1W07cM9gS6DcLperZfFSj+bWLtaPGSOHWhPiGzXmvVJbRLdG82sH/Kn8EtW1VqWVA54AKf2h5k5BbnIbwF3h6w==
   dependencies:
     buffer "^5.5.0"
     inherits "^2.0.4"
@@ -2378,9 +2378,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.378, electron-to-chromium@^1.3.649:
-  version "1.3.657"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.657.tgz#a9c307f2612681245738bb8d36d997cbb568d481"
-  integrity sha512-/9ROOyvEflEbaZFUeGofD+Tqs/WynbSTbNgNF+/TJJxH1ePD/e6VjZlDJpW3FFFd3nj5l3Hd8ki2vRwy+gyRFw==
+  version "1.3.659"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.659.tgz#479eb1a80044ad3664ebd548e7b225fefe06a914"
+  integrity sha512-VPc1LcvuQYGjam6k7JcB6uJFTMo2YNlJ6rSbwbxApZQdow7X81kh/vDB6LB5B8DNmvkbKnpZkLmpKmnvoKA+Gw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -4530,10 +4530,10 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-remotion@^1.0.0, remotion@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/remotion/-/remotion-1.0.1.tgz#318078c4878357c39e3dc77450b92841d361a942"
-  integrity sha512-f3AeZxl3/EkH5dwVE+fZb/4ybgukuhERIQJXktQWalr3y9n/LJRX8G0RslxlnxB7QItz5iU93yHNwUtiXkiSnQ==
+remotion@^1.0.0, remotion@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/remotion/-/remotion-1.0.5.tgz#4547df990b12601d3b1a1036e0fe4df8160022ab"
+  integrity sha512-YDocuICH1Xn/1XmzHx8Cb87NvBiFicsSecHQG/4Sf6ETyVj6KfFooVHOl5KVWAOxzw2WP+JxNShu0HPXaHa8qA==
   dependencies:
     prettier "^2.0.5"
     react "^17.0.1"
