@@ -12,6 +12,8 @@
   "repository": {},
   "license": "UNLICENSED",
   "dependencies": {
+    "@code-hike/mini-browser": "0.2.1",
+    "@code-hike/mini-editor": "0.2.1",
     "@remotion/bundler": "^1.0.0",
     "@remotion/cli": "^1.0.0",
     "@remotion/eslint-config": "^1.0.0",
