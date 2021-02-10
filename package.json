@@ -7,6 +7,7 @@
     "build": "run-s build-video add-audio",
     "build-video": "remotion render src/index.tsx Talk out.mp4 --overwrite",
     "add-audio": "ffmpeg -y -i out.mp4 -i src/speaker.webm -c:v copy -map 0 -map 1:a -shortest talk.mp4",
+    "cut-video": "ffmpeg -ss 00:00:50 -i talk.mp4 -to 00:02:10 -c copy cut.mp4",
     "upgrade": "remotion upgrade",
     "server": "ts-node server.tsx",
     "test": "eslint 'src' --ext ts,tsx && tsc"
