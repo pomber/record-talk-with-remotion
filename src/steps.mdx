@@ -1,0 +1,582 @@
+<Video src="speaker.webm" start={0} end={25} />
+<Browser url="/hello" loadUrl="/01" zoom={0.8} />
+<Editor
+  code="hello.md"
+  lang="md"
+  tab="demo/hello.md"
+  tabs={["demo/hello.md", "pages/hello.js"]}
+/>
+
+```srt
+2 –> 4
+Here we have a Markdown file
+4 –> 10
+Markdown has this clean syntax that
+makes you want to use it for everything
+10 –> 15.6
+And that's also why we have MDX,
+now we can put more things on Markdown
+15.6 –> 19.7
+In this talk,
+we are going to see how flexible MDX is
+19.7 –> 25
+And how to use it for any kind of content
+and any kind of layout
+```
+
+---
+
+<Video src="speaker.webm" start={25} end={39} />
+<Browser url="/hello" loadUrl="/01" zoom={0.8} />
+<Editor
+  code="01.js"
+  lang="jsx"
+  tab="pages/hello.js"
+  tabs={["demo/hello.md", "pages/hello.js"]}
+/>
+
+```srt
+25 –> 29.5
+But first I need to show you how this works
+29.5 –> 34.8
+We have a small Next.js App
+that has the MDX plugin
+34.8 –> 39
+and we have a page that imports
+the markdown file
+```
+
+---
+
+<Video src="speaker.webm" start={39} end={53} />
+<Browser url="/hello" loadUrl="/01" zoom={0.8} />
+<Editor
+  code="01.js"
+  focus="2,5[9:22]"
+  lang="jsx"
+  tab="pages/hello.js"
+  tabs={["demo/hello.md", "pages/hello.js"]}
+/>
+
+```srt
+39 -> 43.7
+The real magic happens on this import
+43.7 -> 49.5
+Here the MDX loader transforms the markdown
+into a React component
+49.5 -> 53
+And the page just renders that component
+```
+
+---
+
+<Video src="speaker.webm" start={53} end={71} />
+<Browser url="/hello" loadUrl="/02" zoom={0.8} />
+<Editor
+  code="02.js"
+  lang="jsx"
+  tab="pages/hello.js"
+  tabs={["demo/hello.md", "pages/hello.js"]}
+/>
+
+```srt
+53 -> 59
+If we want to change what's rendered,
+we can use the MDXProvider
+59 -> 64.3
+It has a prop that let us override
+any of the default components
+64.3 -> 71
+For example, here we are adding
+a purple border to all H1s
+```
+
+---
+
+<Video src="speaker.webm" start={71} end={95.5} />
+<Browser url="/hello" loadUrl="/03" zoom={0.8} />
+<Editor
+  code="03.js"
+  focus="13:23"
+  lang="jsx"
+  tab="pages/hello.js"
+  tabs={["demo/hello.md", "pages/hello.js"]}
+/>
+
+```srt
+71 -> 75.1
+A special component we can override
+is the Wrapper
+75.1 -> 79.5
+The wrapper is the component
+that wraps the content
+79.5 -> 85.6
+You can see how we're using it to add
+a border around the whole content
+85.6 -> 90
+But the cool thing about this component
+is that in the children prop
+90 -> 95.5
+we get all the content from
+the markdown file as React elements
+```
+
+---
+
+<Video src="speaker.webm" start={95.5} end={128.2} />
+<Browser url="/hello" loadUrl="/04" zoom={0.8} />
+<Editor
+  code="04.js"
+  focus="14:20"
+  lang="jsx"
+  tab="pages/hello.js"
+  tabs={["demo/hello.md", "pages/hello.js"]}
+/>
+
+```srt
+95.5 -> 100.5
+and React elements
+are just javascript objects
+100.5 -> 103.9
+Here we are rendering
+the wrapper children as JSON
+103.9 -> 106.8
+We are only showing some of the properties
+106.8 -> 110.8
+I hope you can see
+what the JSON looks like
+110.8 -> 112.3
+It's an array
+112.3 -> 117.9
+the first element is an h1,
+the second a paragraph
+117.9 -> 122
+Each element comes with an mdxType
+122 -> 128.2
+We can, and we will, use that mdxType to
+extract information about the content
+```
+
+---
+
+<Video src="speaker.webm" start={128.2} end={169.7} />
+<Browser url="/hello" loadUrl="/05" zoom={0.9} />
+<Editor
+  code="05.js"
+  focus="17:35"
+  lang="jsx"
+  tab="pages/hello.js"
+  tabs={["demo/hello.md", "pages/hello.js"]}
+/>
+
+```srt
+128.2 -> 129.3
+For example
+129.3 -> 133.3
+we could get a list of all the H1s
+from the children,
+133.3 -> 138.4
+and render it as a table of contents
+This is a very simple example,
+138.4 -> 144.2
+but it shows the pattern we are going
+to use on the rest of the examples
+144.2 -> 147.1
+In all of them, we'll have two steps
+147.1 -> 151
+First, we extract some data
+from the children
+151 -> 156.4
+and then we pass that data
+to some layout component
+156.4 -> 160.4
+Keep in mind that this runs on every render
+160.4 -> 163
+In most cases,
+it isn't a performance problem
+163 -> 169.7
+but if it is, you can move it to a plugin,
+and run the transformation on build-time
+```
+
+---
+
+<Video src="speaker.webm" start={169.7} end={214} />
+<Browser url="/steps" loadUrl="/06" zoom={0.9} />
+<Editor
+  code="steps.mdx"
+  focus="1:20"
+  lang="md"
+  tab="demo/steps.mdx"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+169.7 -> 177.4
+I usually write content that has steps
+like tutorials or any type of walkthrough
+177.4 -> 182.4
+Markdown doesn't have any specific syntax
+for grouping things in steps
+182.4 -> 188.6
+But we can use MDX to extend Markdown
+and make up our syntax
+188.6 -> 192.9
+The implementation of the Step component
+we are using here doesn't matter
+192.9 -> 196
+we are just using it for grouping elements
+196 -> 201.3
+If you are new to MDX,
+this may not be the best introduction
+201.3 -> 206.7
+MDX is typically used for embedding
+interactive components in Markdown
+206.7 -> 209.1
+But here we are taking a different approach
+209.1 -> 214
+and using it more
+as a syntax extension for markdown
+```
+
+---
+
+<Video src="speaker.webm" start={214} end={257.8} />
+<Browser url="/steps" loadUrl="/07" zoom={0.9}>
+  <Action on={230} type="click" selector="button" offset={40} />
+  <Action on={232} type="click" selector="button" offset={40} />
+  <Action on={234} type="click" selector="button" offset={40} />
+</Browser>
+<Editor
+  code="07.js"
+  focus="17:28"
+  lang="jsx"
+  tab="pages/steps.js"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+214 -> 219.5
+Now, based on the MDX file that has steps,
+we can write another Wrapper component
+219.5 -> 224.2
+In this case, the children prop will be
+an array of Step elements
+224.2 -> 229
+So we can keep track of
+what step we are showing using React state
+229 -> 235
+and let the user change the current step
+by clicking a button
+235 -> 241.5
+Ok, now I want to show the same content
+but with a different layout
+241.5 -> 248.5
+There's a technique called scrollytelling,
+you may have seen it on some websites
+248.5 -> 253.5
+as the user scrolls down there's some
+part of the layout that sticks to the screen
+253.5 -> 256.4
+while the rest is scrolled away
+256.4 -> 257.8
+Let's do that
+```
+
+---
+
+<Video src="speaker.webm" start={257.8} end={292.5} />
+<Browser url="/steps" loadUrl="/08" zoom={0.6}>
+  <Action on={278} type="scroll" selector="#step-1" />
+  <Action on={282} type="scroll" selector="#step-2" />
+  <Action on={284} type="scroll" selector="#step-3" />
+  <Action on={286} type="scroll" selector="#step-0" />
+</Browser>
+<Editor
+  code="08.js"
+  focus="18:32"
+  lang="jsx"
+  tab="pages/steps.js"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+257.8 -> 262.5
+Since this is a lightning talk
+I won't show the code of the Layout component
+262.5 -> 267.5
+I'll share the link to the repo later
+if you want to see how it works
+267.5 -> 272
+The ScrollytellingLayout component
+takes two props
+272 -> 278.7
+one for the left-side that can be scrolled,
+and another for the sticky part on the right
+278.7 -> 281
+When the user scrolls to a new step
+281 -> 284.6
+we show the corresponding element
+from the sticker list
+284.6 -> 286.7
+which, for now, it's just the step number
+286.7 -> 292.5
+But let's change it so it shows something
+from the MDX file
+```
+
+---
+
+<Video src="speaker.webm" start={292.5} end={309} />
+<Browser url="/steps" loadUrl="/09" zoom={0.6} />
+<Editor
+  code="steps.2.mdx"
+  focus="3:9,17:23,30"
+  focus="19:23,30:37,44"
+  lang="md"
+  tab="demo/steps.mdx"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+292.5 -> 297
+Suppose we want to show some code
+in the sticky part of the layout
+297 -> 302.5
+Since there isn't any specific syntax
+for this, we'll make up our own
+302.5 -> 309
+For example, we put the sticky part
+as the first element in the Step
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Editor
+  code="10.js"
+  focus="18:32"
+  lang="jsx"
+  tab="pages/steps.js"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+309 -> 311.5
+Now, doing some array transformations
+311.5 -> 315.7
+We extract the list of steps
+and the list of stickers
+315.7 -> 320
+and then pass them
+to the same Layout component
+```
+
+---
+
+<Video src="speaker.webm" start={323} end={335} />
+<Browser url="/steps" loadUrl="/10" zoom={0.6}>
+  <Action on={326} type="scroll" selector="#step-1" />
+  <Action on={328.5} type="scroll" selector="#step-2" />
+  <Action on={331} type="scroll" selector="#step-3" />
+  <Action on={333.5} type="scroll" selector="#step-0" />
+</Browser>
+<Editor
+  code="10.js"
+  focus="18:32"
+  lang="jsx"
+  tab="pages/steps.js"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+323 -> 325
+So now the code on the right
+325 -> 335
+should change as the user scrolls
+to a different step
+```
+
+---
+
+<Video src="speaker.webm" start={335} end={367} />
+<Browser url="/steps" loadUrl="/11" zoom={0.6}>
+  <Action on={345} type="scroll" selector="#step-1" />
+  <Action on={347} type="scroll" selector="#step-2" />
+  <Action on={349} type="scroll" selector="#step-3" />
+  <Action on={351} type="scroll" selector="#step-0" />
+</Browser>
+<Editor
+  code="11.js"
+  focus="19,26:38"
+  lang="jsx"
+  tab="pages/steps.js"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+335 -> 342
+Just for fun, I have a Terminal component
+that animates code transitions
+342 -> 347
+so we can use it for the stickers
+and let it handle the step changes
+350.8 -> 355
+For the next example, let's add some media
+355 -> 358.4
+Instead of changing the steps
+using the scroll
+358.4 -> 363.2
+we can synchronize the steps with something
+like a video or an audio,
+363.2 -> 367
+and change the steps as the media progress
+```
+
+---
+
+<Video src="speaker.webm" start={367} end={377} />
+<Browser url="/steps" loadUrl="/11" zoom={0.6} />
+<Editor
+  code="steps.3.mdx"
+  focus="3,17,19,30"
+  lang="md"
+  tab="demo/steps.mdx"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+367 -> 370.5
+To do that,
+we'll change the MDX
+370.5 -> 377
+we need to specify the media file
+and the time range for each step
+```
+
+---
+
+<Video src="speaker.webm" start={377} end={406.9} />
+<Browser url="/steps" loadUrl="/13" zoom={0.6} />
+<Editor
+  code="13.js"
+  focus="18,28:40"
+  lang="jsx"
+  tab="pages/steps.js"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+377 -> 381.7
+Once we have that, we can extract it
+from the children on the Wrapper
+381.7 -> 384.5
+and pass it to another React component
+384.5 -> 390.3
+this time is the TalkLayout component,
+that will solve all the synching for us
+390.3 -> 398.4
+Now you should see the steps changing
+every time I snap my fingers
+398.4 -> 403
+Some of you may have noticed that this
+looks similar to the layout of this talk
+403 -> 404.7
+the talk I'm giving right now
+404.7 -> 406.9
+and it is
+```
+
+---
+
+<Video src="speaker.webm" start={406.9} end={420} />
+<Browser url="/" zoom={0.4} />
+<Editor
+  code="cake.mdx"
+  focus="508:527"
+  lang="md"
+  tab="demo/cake.mdx"
+  tabs={["demo/cake.mdx", "pages/index.js"]}
+/>
+
+```srt
+406.9 -> 409.5
+This talk was built using this same technique
+409.5 -> 413.7
+It's all MDX
+Always has been
+413.7 -> 420
+On the left you can see the mdx for
+this specific step of the talk
+```
+
+---
+
+<Video src="speaker.webm" start={420} end={439.6} />
+<Browser url="/" zoom={0.4} />
+<Editor
+  code="cake.mdx"
+  focus="531:551"
+  lang="md"
+  tab="demo/cake.mdx"
+  tabs={["demo/cake.mdx", "pages/index.js"]}
+/>
+
+```srt
+420 -> 426
+And here is the next one
+We have four different elements for each step
+426 -> 432.5
+We have the video filename and timestamps
+the url we are showing on the iframe
+432.5 -> 439.6
+information for the code we are highlighting
+and even the captions for the step
+```
+
+---
+
+<Video src="speaker.webm" start={439.6} end={484.1} />
+<Browser url="https://codehike.org" zoom={0.4} prependOrigin={false} />
+<Editor
+  code="package.json.copy"
+  focus="2:16"
+  lang="json"
+  tab="package.json"
+  tabs={["package.json"]}
+/>
+
+```srt
+439.6 -> 444.8
+And, that's all, that's my talk
+So, what's the takeaway?
+444.8 -> 448.5
+Well, don't be afraid to use MDX
+for something different
+448.5 -> 456
+You can use it to make your own dialect
+for almost any kind of content or layout
+456 -> 459.7
+I leave you here the links
+to the repo of the talk
+459.7 -> 462.1
+not the slides
+but the talk itself
+462.1 -> 467
+you run yarn dev
+and you can watch this talk again
+467 -> 471.5
+Also, there's my twitter,
+and the components we used
+471.5 -> 474.4
+Most of them come
+from a new project I'm working on
+474.4 -> 479.2
+Code Hike, it's a set of tools
+to make code walkthroughs
+479.2 -> 483
+or explaining code in general
+483 -> 484.1
+Thank you! :)
+```

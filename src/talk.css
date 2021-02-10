@@ -8,7 +8,7 @@
 }
 
 .talk-scale {
-  transform: scale(calc(1920 / 1024));
+  transform: scale(calc(1280 / 1024));
   width: 1024px;
   height: 576px;
 }
@@ -36,6 +36,10 @@
 .talk-container .ch-frame {
   box-shadow: none;
   border: 0.7px solid rgb(56, 56, 56);
+}
+
+.slot-1 .ch-frame-content {
+  background: #1e1e1e;
 }
 
 /* speaker panel */
