@@ -1,4 +1,4 @@
-export function Gradient({ children, ...props }: any) {
+export function Gradient({ children, ...props }) {
   return (
     <div {...props} style={{ position: "relative", ...props.style }}>
       <svg

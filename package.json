@@ -4,11 +4,12 @@
   "description": "The X in MDX with Remotion",
   "scripts": {
     "start": "remotion preview src/index.tsx",
-    "build": "remotion render src/index.tsx Talk out.mp4",
+    "build": "run-s build-video add-audio",
+    "build-video": "remotion render src/index.tsx Talk out.mp4 --overwrite",
+    "add-audio": "ffmpeg -y -i out.mp4 -i src/speaker.webm -c:v copy -map 0 -map 1:a -shortest talk.mp4",
     "upgrade": "remotion upgrade",
     "server": "ts-node server.tsx",
-    "test": "eslint 'src' --ext ts,tsx && tsc",
-    "mix-audio": "ffmpeg -i out.mp4 -i src/speaker.webm -c:v copy -map 0 -map 1:a -shortest talk.mp4"
+    "test": "eslint 'src' --ext ts,tsx && tsc"
   },
   "repository": {},
   "license": "UNLICENSED",
@@ -28,6 +29,7 @@
     "babel-loader": "^8.2.2",
     "express": "^4.17.1",
     "mdx-loader": "3.0.2",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "raw-loader": "^4.0.2",
     "react": "^17.0.1",

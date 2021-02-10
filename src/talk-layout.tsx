@@ -46,6 +46,8 @@ export function TalkLayout({
     (step) => step.start <= t && t < step.end
   );
 
+  const demoUrl = "https://nextjsconf2020.pomb.us" + browserStep.loadUrl;
+
   return (
     <Center>
       <main className="grid">
@@ -59,12 +61,11 @@ export function TalkLayout({
         <div className="slot-2">
           <MiniBrowser
             style={{ height: "100%" }}
-            steps={browserSteps}
+            // steps={browserSteps}
             progress={0}
+            url={demoUrl}
           >
-            <IFrame
-              src={"https://nextjsconf2020.pomb.us" + browserStep.loadUrl}
-            />
+            <IFrame src={demoUrl} />
           </MiniBrowser>
         </div>
         <Gradient className="slot-3">
@@ -92,7 +93,7 @@ function SpeakerPanel({ caption }) {
   );
 }
 
-function Center({ children }: { children: React.ReactNode }) {
+function Center({ children }) {
   return (
     <div className="talk-container">
       <div className="talk-scale">{children}</div>

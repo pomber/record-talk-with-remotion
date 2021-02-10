@@ -8,7 +8,7 @@ function RemotionVideo() {
       <Composition
         id="Talk"
         component={Talk}
-        durationInFrames={240}
+        durationInFrames={6000}
         fps={30}
         width={1280}
         height={720}
