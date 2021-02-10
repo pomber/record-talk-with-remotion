@@ -1,8 +1,13 @@
-import { spring, useCurrentFrame, useVideoConfig, Video } from "remotion";
+import {
+  IFrame,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+  Video,
+} from "remotion";
 import "./talk.css";
 import { Gradient } from "./gradient";
 import { MiniBrowser } from "@code-hike/mini-browser";
-import { IFrame } from "./iframe";
 import speaker from "./speaker.webm";
 import {
   editorSteps,
