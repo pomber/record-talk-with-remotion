@@ -1255,10 +1255,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@remotion/bundler@1.4.0-alpha.4601a769":
-  version "1.4.0-alpha.4601a769"
-  resolved "https://registry.yarnpkg.com/@remotion/bundler/-/bundler-1.4.0-alpha.4601a769.tgz#2217cb1b2cc2e33b7a109e12196de78a1318f8e4"
-  integrity sha512-xdKsccZ+sUU98YvMPpl1cESa4NuZZedBIEhAQLSkVSP3Rud/p8WJCzKqVs+hVjC6yXmIIM/7fgFp1Tgl7mhmPA==
+"@remotion/bundler@1.4.0-alpha.cb57b7a8":
+  version "1.4.0-alpha.cb57b7a8"
+  resolved "https://registry.yarnpkg.com/@remotion/bundler/-/bundler-1.4.0-alpha.cb57b7a8.tgz#c3273e12f5edf192e8c78c371350492019417d2c"
+  integrity sha512-H8PIChbkLWY1QnJercC6dkGsbMw+CeL0X+Z2H6TxzVcy6dXzqjF2zd7KfBO8CqPp7ymUI62quR1dr78gd1nWfw==
   dependencies:
     "@babel/core" "^7.12.10"
     "@babel/plugin-proposal-class-properties" "^7.12.13"
@@ -1276,7 +1276,7 @@
     react "^17.0.1"
     react-dom "^17.0.1"
     react-refresh "^0.8.2"
-    remotion "^1.4.0-alpha.4601a769"
+    remotion "^1.4.0-alpha.cb57b7a8"
     semver "7.3.4"
     style-loader "^2.0.0"
     styled-components "^5.2.1"
@@ -1285,7 +1285,7 @@
     webpack-dev-middleware "^3.7.2"
     webpack-hot-middleware "^2.25.0"
 
-"@remotion/bundler@^1.4.0-alpha.4601a769", "@remotion/bundler@^1.4.0-alpha.eb6dead8":
+"@remotion/bundler@^1.4.0-alpha.cb57b7a8", "@remotion/bundler@^1.4.0-alpha.eb6dead8":
   version "1.4.0-alpha.eb6dead8"
   resolved "https://registry.yarnpkg.com/@remotion/bundler/-/bundler-1.4.0-alpha.eb6dead8.tgz#b39e1625342320c7ff50400eaccbc8626b6be4e5"
   integrity sha512-o4+deI1eEgJuF6XlmZIveYi2WIsQm1rgk4DDcNC1Si6FW9e2hJjxlAs8anNqLF/tTogwsfl3/PYyGDkagEjeKw==
@@ -1315,17 +1315,17 @@
     webpack-dev-middleware "^3.7.2"
     webpack-hot-middleware "^2.25.0"
 
-"@remotion/cli@1.4.0-alpha.4601a769":
-  version "1.4.0-alpha.4601a769"
-  resolved "https://registry.yarnpkg.com/@remotion/cli/-/cli-1.4.0-alpha.4601a769.tgz#d592ce7378d4c1eb43f17e194098e5b3fed0c91d"
-  integrity sha512-BRntwBfnPbRDHQayf8CRnLvaHWHWYYG9aAc9YtrtbnwhtSAxC5Q2E54dlEEMQgMmbziwX7AM5uo+fCi6fzSwzw==
+"@remotion/cli@1.4.0-alpha.cb57b7a8":
+  version "1.4.0-alpha.cb57b7a8"
+  resolved "https://registry.yarnpkg.com/@remotion/cli/-/cli-1.4.0-alpha.cb57b7a8.tgz#5a1fcb8573908278af4c9012af5ec733750d711c"
+  integrity sha512-f03oFVFqSWwEIlRlbEATAZk0EI3zckWtocNM32efudB722gF5IzhsEqXln1viJyxEQ7JyTtW7rFq0qfK6K3cnw==
   dependencies:
     "@babel/core" "^7.10.4"
     "@babel/preset-env" "^7.10.4"
     "@babel/preset-react" "^7.10.4"
     "@babel/preset-typescript" "^7.10.4"
-    "@remotion/bundler" "^1.4.0-alpha.4601a769"
-    "@remotion/renderer" "^1.4.0-alpha.4601a769"
+    "@remotion/bundler" "^1.4.0-alpha.cb57b7a8"
+    "@remotion/renderer" "^1.4.0-alpha.cb57b7a8"
     "@types/cli-progress" "^3.7.0"
     "@types/node" "^14.0.13"
     "@types/react" "^17.0.0"
@@ -1340,18 +1340,18 @@
     prettier "^2.0.5"
     react "^17.0.1"
     react-dom "^17.0.1"
-    remotion "^1.4.0-alpha.4601a769"
+    remotion "^1.4.0-alpha.cb57b7a8"
     styled-components "^5.1.1"
     typescript "^4.1.2"
     webpack "5.21.2"
     xns "^2.0.7"
 
-"@remotion/eslint-config@1.4.0-alpha.4601a769":
-  version "1.4.0-alpha.4601a769"
-  resolved "https://registry.yarnpkg.com/@remotion/eslint-config/-/eslint-config-1.4.0-alpha.4601a769.tgz#926e169185731b24b264ab1666256f9b8019ca61"
-  integrity sha512-vOBGrDj2kpfWCc65X/ofxLXkt04RzIsmIghgnk/qqGzx15LAlExu5fifuXl6t5aWELHm7Y4YstKUYdR5fDdsWQ==
+"@remotion/eslint-config@1.4.0-alpha.cb57b7a8":
+  version "1.4.0-alpha.cb57b7a8"
+  resolved "https://registry.yarnpkg.com/@remotion/eslint-config/-/eslint-config-1.4.0-alpha.cb57b7a8.tgz#ccb751db443d704434ef1c094dbc9a3cead83dce"
+  integrity sha512-WJx4Azw6dk9y9MlAK1/0WV094UENRukff8sCXhujOMvmUi9LOvMe9jkhZPQCbCOH1T5Cha1d+LMyZJK70pGiUg==
   dependencies:
-    "@remotion/eslint-plugin" "^1.4.0-alpha.4601a769"
+    "@remotion/eslint-plugin" "^1.4.0-alpha.cb57b7a8"
     "@typescript-eslint/eslint-plugin" "^4.10.0"
     "@typescript-eslint/parser" "^4.10.0"
     eslint-config-prettier "^7.1.0"
@@ -1361,29 +1361,29 @@
     eslint-plugin-react "^7.21.5"
     eslint-plugin-react-hooks "^4.2.0"
 
-"@remotion/eslint-plugin@^1.4.0-alpha.4601a769":
+"@remotion/eslint-plugin@^1.4.0-alpha.cb57b7a8":
   version "1.4.0-alpha.eb6dead8"
   resolved "https://registry.yarnpkg.com/@remotion/eslint-plugin/-/eslint-plugin-1.4.0-alpha.eb6dead8.tgz#4b565848a1bf7bd74f3a59fa8963eb6b842aae25"
   integrity sha512-UZLp7Ehq8JbcaNVqBwZJ6VQXpHl9m6BHKxpRWpdvrqEGxId2t8TGBsfR8Ntn2Y7YjevsyHQ5ewFoSw/nSpW0Cw==
 
-"@remotion/renderer@1.4.0-alpha.4601a769":
-  version "1.4.0-alpha.4601a769"
-  resolved "https://registry.yarnpkg.com/@remotion/renderer/-/renderer-1.4.0-alpha.4601a769.tgz#41f89eb28390eb470b7d6bb0329522ef474f88de"
-  integrity sha512-qWy8loDAMAAFYoMfef7zyzPnGznTck+z/6MybASLfmUARBv8bEcY6QOKSTdqs4ZVubEXadZKWCp7r8WrJl02zg==
+"@remotion/renderer@1.4.0-alpha.cb57b7a8":
+  version "1.4.0-alpha.cb57b7a8"
+  resolved "https://registry.yarnpkg.com/@remotion/renderer/-/renderer-1.4.0-alpha.cb57b7a8.tgz#5db916b4d0fb59432f6def353db94360c6daa829"
+  integrity sha512-9funhGBFXNHNk+CQqZA2SlwzmwNfnqZvqY8EuFq4XFiSAU+Kq3nizohWUei66WhRxp/PBMT5fCatFcMAx7PEQg==
   dependencies:
     "@babel/preset-typescript" "^7.10.4"
-    "@remotion/bundler" "^1.4.0-alpha.4601a769"
+    "@remotion/bundler" "^1.4.0-alpha.cb57b7a8"
     "@types/babel__core" "^7.1.12"
     "@types/babel__template" "^7.4.0"
     execa "^4.0.2"
     prettier "^2.0.5"
     puppeteer "^7.1.0"
-    remotion "^1.4.0-alpha.4601a769"
+    remotion "^1.4.0-alpha.cb57b7a8"
     typescript "^4.1.2"
     webpack "5.20.1"
     xns "^2.0.7"
 
-"@remotion/renderer@^1.4.0-alpha.4601a769":
+"@remotion/renderer@^1.4.0-alpha.cb57b7a8":
   version "1.4.0-alpha.eb6dead8"
   resolved "https://registry.yarnpkg.com/@remotion/renderer/-/renderer-1.4.0-alpha.eb6dead8.tgz#9027a673add14163c75e2074a3fd7c6c31d8138d"
   integrity sha512-AcHsm00MfR0k/sGkelBDYVgNP74CEQVklxTJQVi7Mcwa1dNiHJTPiMOlegI1rZhl0wKvxerwBo5bU+96KOyw3w==
@@ -5849,17 +5849,17 @@ remark-textr@^3.0.2:
     textr "^0.3.0"
     unist-util-visit "^1.0.0"
 
-remotion@1.4.0-alpha.4601a769:
-  version "1.4.0-alpha.4601a769"
-  resolved "https://registry.yarnpkg.com/remotion/-/remotion-1.4.0-alpha.4601a769.tgz#9eb49533df4b007e670f4c909d7a99d62bf63a27"
-  integrity sha512-P56gAKK2Y7+6y99bZ07SHKpPm1kxtdjKKDSo7m0WsziK4mdGIX5KINUfDdgffbUMDiDFDVXbceY+Gk0ELNho+A==
+remotion@1.4.0-alpha.cb57b7a8:
+  version "1.4.0-alpha.cb57b7a8"
+  resolved "https://registry.yarnpkg.com/remotion/-/remotion-1.4.0-alpha.cb57b7a8.tgz#cd5129246d7f6fbd8e6208c16f3f5f9bf61fccd4"
+  integrity sha512-6L2wKWyYNMtDxzww5XUYeofqeuzWrDtp3/kOFUSsLzzPbQk2rRTO+Fi+IJxSPZH32qPU0+8YL813nYwMq0mwvA==
   dependencies:
     prettier "^2.0.5"
     react "^17.0.1"
     react-dom "^17.0.1"
     typescript "^4.1.2"
 
-remotion@^1.4.0-alpha.4601a769, remotion@^1.4.0-alpha.eb6dead8:
+remotion@^1.4.0-alpha.cb57b7a8, remotion@^1.4.0-alpha.eb6dead8:
   version "1.4.0-alpha.eb6dead8"
   resolved "https://registry.yarnpkg.com/remotion/-/remotion-1.4.0-alpha.eb6dead8.tgz#7ca6bbca0362c9b44c4454f77ac910476f64a9c5"
   integrity sha512-53JJebXgS/OqAJGUoEyVO1yVU5AYl41T1ORhFNupuJS8GbzzF2HXtG1kDizA++q40Fj5H8rc4/RBgXWUyetEuw==
